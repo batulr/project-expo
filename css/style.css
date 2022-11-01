@@ -1,0 +1,583 @@
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+@font-face {
+  font-family: irish;
+  src: url("../font/irish.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: acme;
+  src: url("../font/acme.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: satisfy;
+  src: url("../font/satisfy.ttf") format("truetype");
+}
+
+* {
+  scroll-behavior: smooth;
+}
+body {
+  color: #757575;
+  background: #ffffff;
+  font-family: "acme", "open sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #454545;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  color: #fb5d32;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #679a0a;
+  outline: none;
+  text-decoration: none;
+}
+
+.btn.custom-btn {
+  padding: 12px 25px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #fb5d32;
+  border: 2px solid #fb5d32;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.btn.custom-btn:hover {
+  color: #fb5d32;
+  background: transparent;
+}
+
+.btn.custom-btn:focus,
+.form-control:focus,
+.custom-select:focus {
+  box-shadow: none;
+}
+
+.container-fluid {
+  max-width: 1366px;
+}
+
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-size: inherit;
+  margin-left: 0;
+}
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.navbar {
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.bg-light {
+  background: transparent !important;
+}
+
+.bg-light.scrolled {
+  background: #ffffff !important;
+  padding-bottom: 5px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+}
+
+.navbar .navbar-brand img {
+  width: 50px;
+  height: auto;
+}
+
+.navbar .nav-link {
+  transition: 0.5s;
+  color: #fff !important;
+  font-size: 20px;
+}
+
+.navbar.scrolled .nav-link {
+  color: #005c96 !important;
+}
+
+.navbar .nav-link:hover {
+  font-size: 25px;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-item a.active {
+  color: #fb5d32 !important;
+  padding-bottom: 1px;
+}
+
+/* navbar toggle animations */
+.navbar .navbar-toggler {
+  color: #fb5d32;
+  border: 2px solid #679a0a;
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    width: 100%;
+    z-index: 9;
+    transition: 0.5s;
+  }
+
+  .bg-light {
+    background: transparent !important;
+  }
+
+  .bg-light.scrolled {
+    background: #fff !important;
+  }
+
+  .navbar .navbar-brand img {
+    width: 40px;
+  }
+
+  .navbar .navbar-nav {
+    width: 27%;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0%, #8d8d8d),
+      color-stop(100%, #c0c0c0)
+    );
+  }
+
+  .navbar .nav-item .nav-link {
+    text-align: center !important;
+    color: white;
+    transition: 0.5s;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .navbar-brand img {
+    width: 30px;
+  }
+}
+
+/***********************************/
+/********** Header CSS ***********/
+/***********************************/
+.header img {
+  height: 100vh;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.header .main {
+  position: absolute;
+  margin-bottom: 20px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header .main h1 {
+  color: #fb5d32;
+  font-family: "irish";
+  font-weight: bold;
+  font-size: 100px;
+}
+
+.header .main h1 .two {
+  color: #679a0a;
+}
+
+.header .centered {
+  position: absolute;
+  margin-top: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header .mainheading h1 {
+  font-family: "satisfy";
+  font-weight: 700;
+  color: #005c96;
+}
+
+.header .mainheading h1 .one {
+  color: #679a0a;
+}
+
+@media (max-width: 991px) {
+  .header img {
+    height: auto;
+  }
+
+  .header .main {
+    position: absolute;
+    top: 25%;
+  }
+
+  .header .main h1 {
+    font-size: 85px;
+  }
+
+  .header .centered {
+    position: absolute;
+    top: 29%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .main h1 {
+    font-size: 65px;
+  }
+
+  .header .mainheading h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header img {
+    height: 50vh;
+  }
+
+  .header .main {
+    position: absolute;
+    top: 23%;
+  }
+
+  .header .main h1 {
+    font-size: 35px;
+  }
+
+  .header .centered {
+    position: absolute;
+    top: 24%;
+  }
+
+  .header .mainheading h1 {
+    font-size: 15px;
+  }
+}
+
+/*********MENU PAGE*************/
+/******* Page Header CSS *******/
+/*******************************/
+.page-header {
+  position: relative;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.page-header img {
+  height: 50vh;
+  object-fit: cover;
+}
+
+.page-header h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fb5d32;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+  .page-header h2 {
+    font-size: 35px;
+  }
+}
+
+/*******************************/
+/******* Section Header ********/
+/*******************************/
+.section-header {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.section-header p {
+  color: #679a0a;
+  margin-bottom: 5px;
+  position: relative;
+  font-size: 45px;
+}
+
+.section-header h2 {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 991.98px) {
+  .section-header h2 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-header h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-header p {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
+/*******************************/
+/********** Food CSS ***********/
+/*******************************/
+.projects {
+  position: relative;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  margin: 20px 0;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+.card img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 250px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ece9e6;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+}
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tag {
+  align-self: flex-start;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  font-size: 0.75rem;
+}
+
+.tag + .tag {
+  margin-left: 0.5em;
+}
+
+.tag-blue {
+  background: #005c96;
+  background: linear-gradient(to bottom, #2f80ed, #005c96);
+  color: #fafafa;
+}
+
+.tag-brown {
+  background: #d1913c;
+  background: linear-gradient(to bottom, #ffd194, #d1913c);
+  color: #fafafa;
+}
+
+.tag-red {
+  background: #cb2d3e;
+  background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.user__info > small {
+  color: #666;
+}
+
+.projects .pro-item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 50px 30px 30px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.projects .pro-item:hover {
+  box-shadow: 0 0 0 #fb5d32;
+}
+
+.projects .pro-item img {
+  width: 70px;
+  align-items: center;
+  padding: 2px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+
+.projects .pro-item:hover img {
+  color: #679a0a;
+  border: none;
+}
+
+.projects .pro-item h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #005c96;
+}
+
+.projects .pro-item:hover h2 {
+  color: #fb5d32;
+}
+
+.projects .pro-item a {
+  position: relative;
+  font-size: 16px;
+}
+
+.projects .pro-item a::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 1px;
+  bottom: 0;
+  left: calc(50% - 25px);
+  background: #fb5d32;
+  transition: 0.3s;
+}
+
+.projects .pro-item a:hover::after {
+  width: 100%;
+  left: 0;
+  background: #679a0a;
+}
+
+.projects .pro-item p {
+  margin-top: 20px;
+}
+
+.projects .pro-item p .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.projects .pro-item p a {
+  text-decoration: none;
+}
+
+.projects .pro-item p a::after {
+  background: transparent !important;
+}
+
+.projects .pro-item p a:hover::after {
+  width: 0%;
+  left: 0;
+  background: transparent !important;
+}
+
+.projects .pro-item p .contact {
+  font-size: 18px;
+}
+
+.projects .pro-item p .contact a {
+  text-decoration: none;
+  color: #679a0a;
+}
+
+.projects .pro-item p .contact a::after {
+  background: transparent !important;
+}
+
+.projects .pro-item p .contact a:hover::after {
+  width: 0%;
+  left: 0;
+  background: transparent !important;
+}
+
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+  position: relative;
+  margin-top: 10px;
+}
+
+.footer .copyright {
+  position: relative;
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  background: #ffffff;
+}
+
+.footer .copyright p {
+  margin: 0;
+  display: inline-block;
+  color: #454545;
+}
+
+.footer .copyright p a {
+  color: #fb5d32;
+}
+
+.footer .copyright p a:hover {
+  color: #679a0a;
+}
