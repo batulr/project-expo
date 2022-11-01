@@ -1,1 +1,1 @@
-# project-expo
+# Project-Expo for Freshers' Induction
